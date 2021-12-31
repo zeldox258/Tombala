@@ -12,7 +12,7 @@ function resetGame(){
 
   for(var i =1;i<91;i++){
     list.push(i);
-    document.querySelector(".a"+i).innerHTML = i;
+    document.querySelector(".a"+i).innerHTML = "X";
 
   }
 
@@ -21,7 +21,7 @@ function resetGame(){
 function getNewNum(){
   var idx = Math.floor(Math.random() * list.length);
   text.innerHTML = list[idx];
-  document.querySelector(".a"+list[idx]).innerHTML = "X";
+  document.querySelector(".a"+list[idx]).innerHTML = list[idx];
   console.log(idx);
   list.splice(idx,1);
 }
